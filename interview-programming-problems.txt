@@ -1,3 +1,6 @@
+updating
+:w
+
 function minRooms(intervals){
     // console.log('intervals', intervals);
     // console.log('intervals[0][0]',intervals[0][0]);
