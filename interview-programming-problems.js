@@ -1,41 +1,39 @@
-updating
-:w
+/***************************************** Practice 1 *****************************************/
+// function minRooms(intervals){
+//     // console.log('intervals', intervals);
+//     // console.log('intervals[0][0]',intervals[0][0]);
+//     // console.log('intervals[0][1]',intervals[0][1]);
+//     if (intervals.length < 2) return intervals.length;
+//     intervals.sort((a,b) => {
+//         // console.log('a', a);
+//         // console.log('b', b);
+//         return a[0] - b[0];
+//     });
+//     console.log('intervals after sort', intervals);
+//     console.log('intervals[0][1]',intervals[0][1]); 
+//     let roomTime = [intervals[0][1]];
+//     console.log('roomTime', roomTime);
+// 
+//     for (let i = 1; i < intervals.length; i++){
+//         let [start, end] = [...intervals[i]];
+//         console.log('start',start);
+//         console.log('end',end);
+//         let earliest = Math.min(...roomTime);
+// 
+//         if (start < earliest){
+//         roomTime.push(end);
+//         }else{
+//         roomTime[roomTime.indexOf(earliest)] = end;
+//         }
+//     }
+//     return roomTime.length;
+// }
+// 
+// let intervals = [[0,30],[1,5],[2,3],[7,10],[5,6]];
+// console.log('intervals berore sort', intervals);
+// console.log("Room needed", minRooms(intervals));
 
-function minRooms(intervals){
-    // console.log('intervals', intervals);
-    // console.log('intervals[0][0]',intervals[0][0]);
-    // console.log('intervals[0][1]',intervals[0][1]);
-    if (intervals.length < 2) return intervals.length;
-    intervals.sort((a,b) => {
-        // console.log('a', a);
-        // console.log('b', b);
-        return a[0] - b[0];
-    });
-    console.log('intervals after sort', intervals);
-    console.log('intervals[0][1]',intervals[0][1]); 
-    let roomTime = [intervals[0][1]];
-    console.log('roomTime', roomTime);
-
-    for (let i = 1; i < intervals.length; i++){
-        let [start, end] = [...intervals[i]];
-        console.log('start',start);
-        console.log('end',end);
-        let earliest = Math.min(...roomTime);
-
-        if (start < earliest){
-        roomTime.push(end);
-        }else{
-        roomTime[roomTime.indexOf(earliest)] = end;
-        }
-    }
-    return roomTime.length;
-}
-
-let intervals = [[0,30],[1,5],[2,3],[7,10],[5,6]];
-console.log('intervals berore sort', intervals);
-console.log("Room needed", minRooms(intervals));
-
-/*****************************************Practice *****************************************/
+/***************************************** Practice 2 *****************************************/
 
 //     },
 //     {
@@ -68,9 +66,8 @@ console.log("Room needed", minRooms(intervals));
 // findDep(classToTake, classes)
 // console.log(`Dependencies for ${classToTake}: `, depArr);
 
-/**********Practice 2**************/
 
-/*****************************************Practice *****************************************/
+/***************************************** Practice 3 *****************************************/
 
 // let courses = [
 //     {
@@ -106,7 +103,7 @@ console.log("Room needed", minRooms(intervals));
 //
 // ]
 
-/*****************************************Practice *****************************************/
+/***************************************** Practice 4 *****************************************/
 
 // var test = "I am outside";
 
@@ -118,8 +115,8 @@ console.log("Room needed", minRooms(intervals));
 
 // logIn();
 
-/**********Practice 3**************/
 
+/***************************************** Practice 5 *****************************************/
 // var a = [
 //     {divisor: 1, dividen: 2}, 
 //     {divisor: 2, dividen: 1}, 
@@ -147,7 +144,7 @@ console.log("Room needed", minRooms(intervals));
 
 // console.log("countReciprocal", countReciprocal(a));
 
-/**********Practice 4**************/
+/***************************************** Practice 6 *****************************************/
 //rite a function that will loop through a list of integers and print the index of each element after a 3 second delay.
 
 // const arr = [10, 12, 15, 21];
@@ -177,7 +174,7 @@ console.log("Room needed", minRooms(intervals));
 //   }, 3000);
 // }
 
-/*****************************************Practice 5*****************************************/
+/***************************************** Practice 7 *****************************************/
 
 //How does this works?
 // var fullname = 'John Doe';
@@ -199,7 +196,7 @@ console.log("Room needed", minRooms(intervals));
 
 // console.log(test.call(obj.prop));
 
-/*****************************************Practice 6*****************************************/
+/***************************************** Practice 8 *****************************************/
 // OBJECT CREATION
 // The Factory Pattern 
 // function createPerson(name, age, job){
@@ -215,7 +212,6 @@ console.log("Room needed", minRooms(intervals));
 
 // var person1 = createPerson('Nicholoas', 29, 'Software Engineer');
 // person1.sayName();
-I
 //////////////////////////
 // function gizmo(id){
 //     return {
@@ -280,7 +276,7 @@ I
 
 
 
-/*****************************************Practice 7*****************************************/
+/***************************************** Practice 9 *****************************************/
 
 // const arr = [10, 12, 15, 21];
 
@@ -294,7 +290,7 @@ I
 
 // }
 
-/*****************************************Practice 8*****************************************/
+/***************************************** Practice 10 *****************************************/
 
 // var var1 = "I am var1 on global";
 // var obj = {
@@ -308,42 +304,42 @@ I
 
 // console.log("var1", obj.var1);
 
-/*****************************************Practice 9*****************************************/
+/***************************************** Practice 11 *****************************************/
 
-function baz(){
-    // call-stack is: 'baz'
-    // so, our call-site is in the global scope
-    console.log('baz');
-    bar(); // <-- call-site for 'bar'
-}
-function bar(){
-    // call-stack is : 'baz' -> 'bar'
-    // so, our call-site is in 'baz'
-    console.log('bar');
-    foo(); // <-- call-site for 'foo'
-}
-function foo(){
-    // call-stack is: 'baz' -> 'bar' -> 'foo'
-    // so, our call-site is in 'bar'
-    console.log('foo');
-}
-baz(); // <-- call-site for 'baz'
+// function baz(){
+//     // call-stack is: 'baz'
+//     // so, our call-site is in the global scope
+//     console.log('baz');
+//     bar(); // <-- call-site for 'bar'
+// }
+// function bar(){
+//     // call-stack is : 'baz' -> 'bar'
+//     // so, our call-site is in 'baz'
+//     console.log('bar');
+//     foo(); // <-- call-site for 'foo'
+// }
+// function foo(){
+//     // call-stack is: 'baz' -> 'bar' -> 'foo'
+//     // so, our call-site is in 'bar'
+//     console.log('foo');
+// }
+// baz(); // <-- call-site for 'baz'
 
-/*****************************************Practice 10*****************************************/
+/***************************************** Practice 12 *****************************************/
 
 //function calling another function
-function wrap(execute){
-     try{
-        execute();
-    }  catch (e){
-        console.log(e.name + ': ' + e.message);
-    }
-}
-
-var errorExec = wrap(function(){
-    throw new Error('Error Fermin');
-});
-errorExec;
+// function wrap(execute){
+//      try{
+//         execute();
+//     }  catch (e){
+//         console.log(e.name + ': ' + e.message);
+//     }
+// }
+// 
+// var errorExec = wrap(function(){
+//     throw new Error('Error Fermin');
+// });
+// errorExec;
 // 
 // var resultExec = wrap(function(){
 //     return 'Result'
@@ -354,7 +350,7 @@ errorExec;
 //
 // console.log(typeof throw new Error('Error'));
 
-/*****************************************Practice 11*****************************************/
+/***************************************** Practice 13 *****************************************/
 
 // compressing strings
 // aaa: a3
@@ -387,7 +383,7 @@ var hasArr ={};
 count(strInput);
 */
 
-/*****************************************Practice 12*****************************************/
+/***************************************** Practice 14 *****************************************/
 
 /*
 let str = 'aaaaabbbbbcccccaaaaa';
@@ -407,28 +403,28 @@ let compressBad = (str) => {
 console.log(compressBad(str));
 */
 
-/*****************************************Practice 13*****************************************/
+/***************************************** Practice 15 *****************************************/
 
-let str = 'aaaaabbbbbcccc';
+// let str = 'aaaaabbbbbcccc';
+// 
+// let compressedString = '';
+// let compress = (str) => {
+//     let repeatCount = 0
+//     for(let i  = 0; i < str.length; i++) {
+//         repeatCount++;
+//     
+//         if (str[i] != str[i+1] || i + 1 >= str.length){
+//             compressedString += str[i]+repeatCount;
+//             repeatCount = 0;
+//         }
+//     
+//     }
+//     return compressedString.length >= str.length ? str : compressedString;
+// 
+// }
+// console.log(compress(str));
 
-let compressedString = '';
-let compress = (str) => {
-    let repeatCount = 0
-    for(let i  = 0; i < str.length; i++) {
-        repeatCount++;
-    
-        if (str[i] != str[i+1] || i + 1 >= str.length){
-            compressedString += str[i]+repeatCount;
-            repeatCount = 0;
-        }
-    
-    }
-    return compressedString.length >= str.length ? str : compressedString;
-
-}
-console.log(compress(str));
-
-/*****************************************Practice 14*****************************************/
+/***************************************** Practice 16 *****************************************/
 
 /* 
  * Your previous Ruby content is preserved below:
@@ -501,7 +497,7 @@ console.log(temp);
 console.log(trueOrFalseFunc(h));
 */
 
-/*****************************************Practice 15*****************************************/
+/***************************************** Practice 17 *****************************************/
 // Parenthesis Matching
 // input:
 // arr = ["(){}[]", "{}()[]"]
@@ -509,49 +505,61 @@ console.log(trueOrFalseFunc(h));
 // output:
 // arr = ["YES", "NO"]
 
-function arrayOfValues(arrayOfBraces){
-    let returnAr = [];
-    arrayOfBraces.forEach( str => {
-        let isBalancedParenthesis = (str) => {
-            return !str.split('').reduce((uptoPrevChar, thisChar) => {
-                if(thisChar === '(' || thisChar === '{' || thisChar === '[' ) {
-                    return ++uptoPrevChar;
-                } else if (thisChar === ')' || thisChar === '}' || thisChar === ']') {
-                    return --uptoPrevChar;
-                }
-                return uptoPrevChar;
-            }, 0);
-        }
-        console.log(isBalancedParenthesis);
-        if (isBalancedParenthesis(str)){
-            returnAr.push('YES');
-        }else{
-            returnAr.push('NO');
-        }
-    });
-    return returnAr;
-}
+// function arrayOfValues(arrayOfBraces){
+//     let returnAr = [];
+//     arrayOfBraces.forEach( str => {
+//         let isBalancedParenthesis = (str) => {
+//             return !str.split('').reduce((uptoPrevChar, thisChar) => {
+//                 if(thisChar === '(' || thisChar === '{' || thisChar === '[' ) {
+//                     return ++uptoPrevChar;
+//                 } else if (thisChar === ')' || thisChar === '}' || thisChar === ']') {
+//                     return --uptoPrevChar;
+//                 }
+//                 return uptoPrevChar;
+//             }, 0);
+//         }
+//         console.log(isBalancedParenthesis);
+//         if (isBalancedParenthesis(str)){
+//             returnAr.push('YES');
+//         }else{
+//             returnAr.push('NO');
+//         }
+//     });
+//     return returnAr;
+// }
+// 
+// let ar = ['(){}[]', '(){}['];
+// console.log(arrayOfValues(ar));
 
-let ar = ['(){}[]', '(){}['];
-console.log(arrayOfValues(ar));
+/***************************************** Practice 18 *****************************************/
+// <?php
+// function isValid($coordinates){
+//     $ar = [];
+//     foreach ($coordinates as $coordinate){
+//         $coordinate = explode(",", $coordinate);
+// 
+//         $latitude = str_replace('(', '', $coordinate[0]);
+// 
+//         $longitude = str_replace(')', '', trim($coordinate[1]) );
+// 
+// 
+//         $latitude_regx = '/^(\+|-)?(?:90(?:(?:\.0{1,8})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,8})?))$/';
+// 
+//         $longitude_regx = '/^(\+|-)?(?:180(?:(?:\.0{1,8})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,8})?))$/';
+// 
+//         if (preg_match($latitude_regx, $latitude)) {
+//             if (preg_match($longitude_regx, $longitude)) {
 
-/*****************************************Practice 16*****************************************/
+/***************************************** Practice 19 *****************************************/
+let wait = (time) => new Promise(function(resolves, rejects){
+    setTimeout(resolves("resolved"), time);
+});
 
-<?php
-function isValid($coordinates){
-    $ar = [];
-    foreach ($coordinates as $coordinate){
-        $coordinate = explode(",", $coordinate);
-
-        $latitude = str_replace('(', '', $coordinate[0]);
-
-        $longitude = str_replace(')', '', trim($coordinate[1]) );
-
-
-        $latitude_regx = '/^(\+|-)?(?:90(?:(?:\.0{1,8})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,8})?))$/';
-
-        $longitude_regx = '/^(\+|-)?(?:180(?:(?:\.0{1,8})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,8})?))$/';
-
-        if (preg_match($latitude_regx, $latitude)) {
-            if (preg_match($longitude_regx, $longitude)) {
-/*****************************************Practice 11*****************************************/
+wait(1000).then((m)=>console.log(m));
+/***************************************** Practice 20 *****************************************/
+/***************************************** Practice 21 *****************************************/
+/***************************************** Practice 22 *****************************************/
+/***************************************** Practice 23 *****************************************/
+/***************************************** Practice 24 *****************************************/
+/***************************************** Practice 25 *****************************************/
+/***************************************** Practice 26 *****************************************/
