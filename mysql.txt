@@ -1,0 +1,122 @@
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+/*
+Write a query that selects task id, author name and assignee name for each task.
+if there is no assignee for a task, the query should return null instead of the assignee name.
+
+-- Suggested testing environment:
+-- http://sqlite.online/
+
+-- Example case create statement:
+
+CREATE TABLE employees (
+  id INTEGER NOT NULL PRIMARY KEY,
+  name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE tasks (
+  id INTEGER NOT NULL PRIMARY KEY,
+  authorId INTEGER NOT NULL REFERENCES employees (id),
+  assigneeId INTEGER REFERENCES employees (id)
+);
+
+INSERT INTO employees(id, name) VALUES(1, 'Richard');
+INSERT INTO employees(id, name) VALUES(2, 'Lily');
+
+INSERT INTO tasks(id, authorId, assigneeId) VALUES(1, 1, NULL);
+INSERT INTO tasks(id, authorId, assigneeId) VALUES(2, 2, 1);
+
+-- Expected output (in any order):
+-- id  author  assignee
+-- ----------------------
+-- 1   Richard
+-- 2   Lily    Richard
+*/
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+
+
+/*
+-- Suggested testing environment:
+-- http://sqlite.online/
+
+-- Example case create statement:
+CREATE TABLE menu (
+  itemName VARCHAR(50) PRIMARY KEY NOT NULL,
+  category VARCHAR(50) NOT NULL,
+  price DECIMAL(5,2)
+);
+
+INSERT INTO menu(itemName, category, price) VALUES('Vegetable Soup', 'Soups', 5);
+INSERT INTO menu(itemName, category, price) VALUES('Spaghetti Bolognese', 'Mains', 6);
+
+-- Insert answer here
+
+SELECT * FROM menu;
+
+-- Expected output (in any order):
+-- itemName               category    price
+-- ----------------------------------------
+-- Vegetable Soup         Soups       5.5
+-- Spaghetti Bolognese    Mains       6
+
+-- Explanation:
+-- In this example.
+-- Vegetable soup is in the Soups category, which means its price should be increased from 5 dollars, by 10%, to 5.5 dollars.
+-- Spaghetti Bolognese is in the Mains category, which means that its price should remain unchanged.
+*/
+
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+/*
+-- Suggested testing environment:
+-- http://sqlite.online/
+
+-- Example case create statement:
+CREATE TABLE departments (
+  id INTEGER PRIMARY KEY NOT NULL,
+  name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE employees (
+  id INTEGER PRIMARY KEY NOT NULL,
+  departmentId INTEGER NOT NULL REFERENCES departments(id),
+  name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE departmentReport (
+  departmentName VARCHAR(50) NOT NULL,
+  employeeCount INTEGER NOT NULL
+);
+
+INSERT INTO departments(id, name) VALUES(1, 'Sales');
+INSERT INTO departments(id, name) VALUES(2, 'Customer Support');
+
+INSERT INTO employees(id, departmentId, name) VALUES(1, 1, 'Mike Brewer');
+INSERT INTO employees(id, departmentId, name) VALUES(2, 1, 'Edd China');
+INSERT INTO employees(id, departmentId, name) VALUES(3, 2, 'Randy Marsh');
+
+-- Insert answer here
+
+SELECT * FROM departmentReport;
+
+-- Expected output (in any order):
+-- departmentName      employeeCount
+-- ---------------------------------
+-- Sales               2
+-- Customer Support    1
+
+-- Explanation:
+-- In this example.
+-- Mike Brewer and Edd China are in the Sales Department. Randy Marsh is in the Customer Support Department.
+-- The Sales Department has two employees, and the Customer Support Department has one.
+*/
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
